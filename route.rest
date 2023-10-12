@@ -1,0 +1,15 @@
+GET http://localhost:3000/users/
+
+###
+
+GET http://localhost:3000/users/6527d97052b6a71c16d77071
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "ABCD",
+  "mobile": "07712345677"
+}
