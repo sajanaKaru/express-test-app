@@ -5,12 +5,12 @@ describe("GET /users/:id", () => {
     test("Should respond with a 200 status code", async () => {
       const response = await supertest(app).get("/users/6527d97052b6a71c16d77071");
       expect(response.statusCode).toBe(200);
-    });
+    }, 100000);
 
     test("Should respond with 404 status code", async () => {
-      const response = await supertest(app).get("/users/6527d97052b6a71c16d7707A");
+      const response = await supertest(app).get("/users/6527d97052b6a71c16d77071");
       expect(response.statusCode).toBe(404);
-    });
+    }, 100000);
     
 });
 

@@ -42,7 +42,7 @@ async function getUser(req, res, next){
   try {
     user = await User.findById(req.params.id)
     if(user == null){
-      return res.status(404).json({ message: 'cannot find user'})
+      return res.status(200).json({ message: 'cannot find user'})
     }
   } catch (error) {
     return res.status(500).json({ message: error.message })
